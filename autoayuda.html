@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artes y Diseño - Sophos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="header-logo">
+        <a href="index.html">
+            <img src="logo.png" alt="" class="logo-img">
+        </a>
+    </header>
+
+    <nav class="nav-negra">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#" id="btn-libros">Libros ▾</a>
+                <ul class="dropdown-content" id="menu-libros">
+                    <li><a href="artes.html">Artes</a></li>
+                    <li><a href="autoayuda.html">Autoayuda</a></li>
+                    <li><a href="comic.html">Cómic</a></li>
+                    <li><a href="novela.html">Novela</a></li>
+                    <li><a href="poesia.html">Poesía</a></li>
+                    <li><a href="cuentos.html">Cuentos</a></li>
+                </ul>
+            </li>
+            <li><a href="ediciones.html">Ediciones especiales</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="busqueda.html">Búsqueda avanzada</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor-libros">
+        <h1>Autoayuda</h1>
+        
+        <div class="grid-libros">
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/complacer.jpg" alt="Complacer" class="img-portada">
+                    </div>
+                <h3>Complacer</h3>
+                <p>Ingrid Clayton</p>
+                <span>Q200.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/amigaseparateya.jpg" alt="Amiga, Sepárate Ya" class="img-portada">
+                    </div>
+                <h3>Amiga, Sepárate Ya</h3>
+                <p>Coral Herrera / Herrera, Coral</p>
+                <span>Q180.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/nolodejesparamañana.jpg" alt="No lo Dejes para Mañana" class="img-portada">
+                    </div>
+                <h3>No lo Dejes para Mañana</h3>
+                <p>Rob Dial</p>
+                <span>Q230.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/lamentalidaddelamor.jpg" alt="La Mentalidad del Amor" class="img-portada">
+                    </div>
+                <h3>La Mentalidad del Amor</h3>
+                <p>Williamson, Marianne</p>
+                <span>Q170.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/lascasualidadesnoexisten.jpg" alt="Las Casualidades no Existen" class="img-portada">
+                    </div>
+                <h3>Las Casualidades no Existen</h3>
+                <p>Vilaseca, Borja</p>
+                <span>Q140.00</span>
+            </div>
+            
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/codigonoverbal.jpg" alt="Código no Verbal" class="img-portada">
+                    </div>
+                <h3>Código no Verbal</h3>
+                <p>López, Sonia El Hakim / El Hakim López, Sonia</p>
+                <span>Q140.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/rodeadosdenarcisistas.jpg" alt="Rodeados de Narcisistas" class="img-portada">
+                    </div>
+                <h3>Rodeados de Narcisistas/h3>
+                <p>Erikson, Thomas</p>
+                <span>Q190.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/vivirelcaminodelartista.jpg" alt="Este Libro Es Más Barato que la Terapia" class="img-portada">
+                    </div>
+                <h3>Este Libro Es Más Barato que la Terapia</h3>
+                <p>Kelly, Liz</p>
+                <span>Q260.00</span>
+
+        </div>
+    </main>
+
+    <script>
+        const btn = document.getElementById('btn-libros');
+        const menu = document.getElementById('menu-libros');
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            menu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', () => {
+            menu.classList.remove('show');
+        });
+    </script>
+
+</body>
+</html>

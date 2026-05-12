@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artes y Diseño - Sophos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="header-logo">
+        <a href="index.html">
+            <img src="logo.png" alt="" class="logo-img">
+        </a>
+    </header>
+
+    <nav class="nav-negra">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#" id="btn-libros">Libros ▾</a>
+                <ul class="dropdown-content" id="menu-libros">
+                    <li><a href="artes.html">Artes</a></li>
+                    <li><a href="autoayuda.html">Autoayuda</a></li>
+                    <li><a href="comic.html">Cómic</a></li>
+                    <li><a href="novela.html">Novela</a></li>
+                    <li><a href="poesia.html">Poesía</a></li>
+                    <li><a href="cuentos.html">Cuentos</a></li>
+                </ul>
+            </li>
+            <li><a href="ediciones.html">Ediciones especiales</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="busqueda.html">Búsqueda avanzada</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor-libros">
+        <h1>Artes</h1>
+        
+        <div class="grid-libros">
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/ladronesdelartes.jpg" alt="Ladrones de Arte" class="img-portada">
+                    </div>
+                <h3>Ladrones de Arte</h3>
+                <p>Trigo, Ana</p>
+                <span>Q198.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/elcaminodelartista.jpg" alt="El Camino del Artista" class="img-portada">
+                    </div>
+                <h3>El Camino del Artista (Edición Especial en Tapa Dura y Bitono)</h3>
+                <p>Cameron, Julia</p>
+                <span>Q295.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/elartedecrear.jpg" alt="El Arte de Crear" class="img-portada">
+                    </div>
+                <h3>El Arte de Crear</h3>
+                <p>Nguyen, Joseph</p>
+                <span>Q240.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/elmundodelreves.jpg" alt="El Mundo del Revés" class="img-portada">
+                    </div>
+                <h3>El Mundo del Revés</h3>
+                <p>Moser, Benjamin</p>
+                <span>Q355.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/elartesdeentenderelarte.jpg" alt="El Arte de Entender el Arte" class="img-portada">
+                    </div>
+                <h3>El Arte de Entender el Arte</h3>
+                <p>Bryan, Kate</p>
+                <span>Q285.00</span>
+            </div>
+            
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/mirarloscielos.jpg" alt="Mirar los Cielos" class="img-portada">
+                    </div>
+                <h3>Mirar los Cielos</h3>
+                <p>Villar Martín, Montserrat</p>
+                <span>Q285.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/contraelarte.jpg" alt="Contra el Arte" class="img-portada">
+                    </div>
+                <h3>Contra el Arte</h3>
+                <p>Maillard, Chantal</p>
+                <span>Q265.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/vivirelcaminodelartista.jpg" alt="Vivir el Camino del Artista" class="img-portada">
+                    </div>
+                <h3>Vivir el Camino del Artista</h3>
+                <p>Cameron, Julia</p>
+                <span>Q160.00</span>
+
+        </div>
+    </main>
+
+    <script>
+        const btn = document.getElementById('btn-libros');
+        const menu = document.getElementById('menu-libros');
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            menu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', () => {
+            menu.classList.remove('show');
+        });
+    </script>
+
+</body>
+</html>

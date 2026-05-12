@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="header-logo">
+        <a href="index.html">
+            <img src="IMG/logo.png" alt="Logo" class="logo-img">
+        </a>
+    </header>
+
+    <nav class="nav-negra">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#" id="btn-libros">Libros ▾</a>
+                <ul class="dropdown-content" id="menu-libros">
+                    <li><a href="artes.html">Artes</a></li>
+                    <li><a href="autoayuda.html">Autoayuda</a></li>
+                    <li><a href="comic.html">Cómic</a></li>
+                    <li><a href="novela.html">Novela</a></li>
+                    <li><a href="poesia.html">Poesía</a></li>
+                    <li><a href="cuentos.html">Cuentos</a></li>
+                </ul>
+            </li>
+            <li><a href="ediciones.html">Ediciones especiales</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="busqueda.html">Búsqueda avanzada</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor-libros">
+        <div class="grid-libros">
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder"></div>
+                <h3></h3>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder"></div>
+                <h3></h3>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder"></div>
+                <h3></h3>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder"></div>
+                <h3></h3>
+                <p></p>
+                <span></span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const btn = document.getElementById('btn-libros');
+        const menu = document.getElementById('menu-libros');
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            menu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', () => {
+            menu.classList.remove('show');
+        });
+    </script>
+
+</body>
+</html>
