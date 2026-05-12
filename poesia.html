@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artes y Diseño - Sophos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="header-logo">
+        <a href="index.html">
+            <img src="logo.png" alt="" class="logo-img">
+        </a>
+    </header>
+
+    <nav class="nav-negra">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#" id="btn-libros">Libros ▾</a>
+                <ul class="dropdown-content" id="menu-libros">
+                    <li><a href="artes.html">Artes</a></li>
+                    <li><a href="autoayuda.html">Autoayuda</a></li>
+                    <li><a href="comic.html">Cómic</a></li>
+                    <li><a href="novela.html">Novela</a></li>
+                    <li><a href="poesia.html">Poesía</a></li>
+                    <li><a href="cuentos.html">Cuentos</a></li>
+                </ul>
+            </li>
+            <li><a href="ediciones.html">Ediciones especiales</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="busqueda.html">Búsqueda avanzada</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor-libros">
+        <h1>Poesía</h1>
+        
+        <div class="grid-libros">
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/poesiacompleta.jpg" alt="Poesía Completa" class="img-portada">
+                    </div>
+                <h3>Poesía Completa</h3>
+                <p>Henry, Emily</p>
+                <span>Q310.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/elegiasynanas.jpg" alt="Elegías y Nanas" class="img-portada">
+                    </div>
+                <h3>Elegías y Nanas</h3>
+                <p>Hernández, Miguel</p>
+                <span>Q235.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/sinfoniadeuncorazonroto.jpg" alt="Sinfonia de un Corazon Roto" class="img-portada">
+                    </div>
+                <h3>Sinfonia de un Corazon Roto</h3>
+                <p>Kelbin Torres</p>
+                <span>Q140.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/meaniquila.jpg" alt="Me Aniquila" class="img-portada">
+                    </div>
+                <h3>Me Aniquila</h3>
+                <p>Merini, Alda</p>
+                <span>Q90.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/enunmunodegrises.jpg" alt="En un Mundo de Grises" class="img-portada">
+                    </div>
+                <h3>En un Mundo de Grises</h3>
+                <p>Carrión, Sergio</p>
+                <span>Q195.00</span>
+            </div>
+            
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/romancero.jpg" alt="Romancero" class="img-portada">
+                    </div>
+                <h3>Romancero</h3>
+                <p>Anónimo</p>
+                <span>Q810.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/tedareelolvido.jpg" alt="Te Daré el Olvido" class="img-portada">
+                    </div>
+                <h3>Te Daré el Olvido</h3>
+                <p>Alberto Villarreal</p>
+                <span>Q140.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/poesia.jpg" alt="Poesía" class="img-portada">
+                    </div>
+                <h3>Poesía</h3>
+                <p>Miguel De Cervantes / De Cervantes Saavedra, Miguel</p>
+                <span>Q140.00</span>
+
+        </div>
+    </main>
+
+    <script>
+        const btn = document.getElementById('btn-libros');
+        const menu = document.getElementById('menu-libros');
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            menu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', () => {
+            menu.classList.remove('show');
+        });
+    </script>
+
+</body>
+</html>

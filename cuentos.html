@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artes y Diseño - Sophos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="header-logo">
+        <a href="index.html">
+            <img src="logo.png" alt="" class="logo-img">
+        </a>
+    </header>
+
+    <nav class="nav-negra">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#" id="btn-libros">Libros ▾</a>
+                <ul class="dropdown-content" id="menu-libros">
+                    <li><a href="artes.html">Artes</a></li>
+                    <li><a href="autoayuda.html">Autoayuda</a></li>
+                    <li><a href="comic.html">Cómic</a></li>
+                    <li><a href="novela.html">Novela</a></li>
+                    <li><a href="poesia.html">Poesía</a></li>
+                    <li><a href="cuentos.html">Cuentos</a></li>
+                </ul>
+            </li>
+            <li><a href="ediciones.html">Ediciones especiales</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="busqueda.html">Búsqueda avanzada</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor-libros">
+        <h1>Cuentos</h1>
+        
+        <div class="grid-libros">
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/starwars.jpg" alt="Star Wars. Una Nueva Esperanza" class="img-portada">
+                    </div>
+                <h3>Star Wars. Una Nueva Esperanza</h3>
+                <p>Star Wars</p>
+                <span>Q190.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/catabasis.jpg" alt="Catábasis (En Español)" class="img-portada">
+                    </div>
+                <h3>Catábasis (En Español)</h3>
+                <p>Kuang, R. F.</p>
+                <span>Q240.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/elprioratodelnaranjo.jpg" alt="El Priorato del Naranjo (Edición Limitada)" class="img-portada">
+                    </div>
+                <h3>El Priorato del Naranjo (Edición Limitada)</h3>
+                <p>Shannon, Samantha</p>
+                <span>Q115.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/relatoscompletos.jpg" alt="Relatos Completos 2" class="img-portada">
+                    </div>
+                <h3>Relatos Completos 2</h3>
+                <p>Asimov, Isaac</p>
+                <span>Q415.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/elbosqueenplenoinvierno.jpg" alt="El Bosque en Pleno Invierno" class="img-portada">
+                    </div>
+                <h3>El Bosque en Pleno Invierno</h3>
+                <p>Clarke, Susanna</p>
+                <span>Q195.00</span>
+            </div>
+            
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/inmanencia.jpg" alt="Inmanencia" class="img-portada">
+                    </div>
+                <h3>Inmanencia</h3>
+                <p>Víctor Lapuente</p>
+                <span>Q255.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/lacaidadenumenor.jpg" alt="La Caída de Númenor" class="img-portada">
+                    </div>
+                <h3>La Caída de Númenor</h3>
+                <p>Tolkien, J. R. R.</p>
+                <span>Q150.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/eldevenir.jpg" alt="El Devenir (El Legado del Dragón 2)" class="img-portada">
+                    </div>
+                <h3>El Devenir (El Legado del Dragón 2)</h3>
+                <p>Roberts, Nora</p>
+                <span>Q150.00</span>
+
+        </div>
+    </main>
+
+    <script>
+        const btn = document.getElementById('btn-libros');
+        const menu = document.getElementById('menu-libros');
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            menu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', () => {
+            menu.classList.remove('show');
+        });
+    </script>
+
+</body>
+</html>
