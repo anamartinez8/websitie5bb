@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Carrito - Librería</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .contenedor-carrito { max-width: 800px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 8px; }
+        .item-carrito { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #eee; padding: 15px 0; }
+        .item-carrito img { width: 60px; height: 80px; object-fit: contain; }
+        .info-item { flex-grow: 1; margin-left: 20px; }
+        .total-seccion { text-align: right; margin-top: 20px; font-size: 20px; font-weight: bold; }
+        .btn-pedido { background-color: #27ae60; color: white; padding: 15px; border: none; width: 100%; cursor: pointer; font-size: 18px; margin-top: 20px; border-radius: 5px; }
+        .btn-vaciar { background: none; border: none; color: #e74c3c; cursor: pointer; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="header-logo">
+        <a href="index.html"><img src="IMG/logo.png" alt="Logo" class="logo-img"></a>
+    </header>
+
+    <div class="contenedor-carrito">
+        <h1>Tu Carrito</h1>
+        <div id="lista-carrito">
+            </div>
+        <div class="total-seccion">
+            Total: <span id="precio-total">Q0.00</span>
+        </div>
+        <button class="btn-pedido" id="hacer-pedido">Confirmar Pedido</button>
+        <p style="text-align: center; margin-top: 15px;">
+            <button class="btn-vaciar" id="vaciar-carrito">Vaciar carrito</button>
+        </p>
+        <a href="index.html">Volver al menú</a>
+    </div>
+
+    <script>
+        function cargarCarrito() {
+            const lista = document.getElementById('lista-carrito');
+            const totalTxt = document.getElementById('precio-total');
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            
+            if (carrito.length === 0) {
+                lista.innerHTML = "<p>Tu carrito está vacío.</p>";
+                totalTxt.innerText = "Q0.00";
+                return;
+            }
+
+            let total = 0;
+            lista.innerHTML = carrito.map((item, index) => {
+                // Limpiamos el precio por si tiene la "Q"
+                let precioLimpio = parseFloat(String(item.precio).replace('Q', ''));
+                total += precioLimpio;
+                
+                return `
+                    <div class="item-carrito">
+                        <img src="${item.imagen}" alt="${item.titulo}">
+                        <div class="info-item">
+                            <h3>${item.titulo}</h3>
+                            <p>Precio: Q${precioLimpio.toFixed(2)}</p>
+                        </div>
+                        <button onclick="eliminarItem(${index})" style="cursor:pointer">❌</button>
+                    </div>
+                `;
+            }).join('');
+
+            totalTxt.innerText = `Q${total.toFixed(2)}`;
+        }
+
+        function eliminarItem(index) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            carrito.splice(index, 1);
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            cargarCarrito();
+        }
+
+        document.getElementById('vaciar-carrito').onclick = () => {
+            localStorage.removeItem('carrito');
+            cargarCarrito();
+        };
+
+        document.getElementById('hacer-pedido').onclick = () => {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            if(carrito.length > 0) {
+                alert("¡Pedido realizado con éxito! Gracias por tu compra.");
+                localStorage.removeItem('carrito');
+                window.location.href = "index.html";
+            } else {
+                alert("El carrito está vacío.");
+            }
+        };
+
+        cargarCarrito();
+    </script>
+</body>
+</html>

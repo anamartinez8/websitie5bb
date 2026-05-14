@@ -20,6 +20,7 @@
                 <a href="libros.html">Libros ▾</a>
             <li><a href="promocion.html">Promociones</a></li>
             <li><a href="busqueda.html">Búsqueda avanzada</a></li>
+            <li><a href="carrito.html">🛒 Carrito</a></li>
         </ul>
     </nav>
     <div class="contenedor-detalle">
@@ -66,6 +67,27 @@
     document.getElementById('precio-libro').innerText = datosLibro.precio;
     document.getElementById('foto-libro').src = datosLibro.imagen;
     document.getElementById('sinopsis-libro').innerText = datosLibro.sinopsis;
+
+const btnAgregar = document.querySelector('.btn-agregar');
+
+btnAgregar.addEventListener('click', () => {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    const producto = {
+        id: libroID,
+        titulo: datosLibro.titulo,
+        precio: datosLibro.precio,
+        imagen: datosLibro.imagen
+    };
+
+    carrito.push(producto);
+
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+
+    alert(`¡"${datosLibro.titulo}" se ha agregado al carrito!`);
+    
+    console.log('Carrito actual:', carrito);
+});
 </script>
 </body>
 </html>
