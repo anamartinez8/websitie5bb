@@ -79,17 +79,17 @@
             biblioteca[id].titulo.toLowerCase().includes(textoBusqueda) || 
             biblioteca[id].autor.toLowerCase().includes(textoBusqueda)
         );
-
-        contenedor.innerHTML = encontrados.map(id => `
-            <div class="tarjeta-libro">
-                <a href="detalle.html?id=${id}" style="text-decoration:none; color:inherit;">
-                    <img src="${biblioteca[id].imagen}" alt="${biblioteca[id].titulo}" style="width:100%; border-radius:8px;">
-                    <h3 style="margin: 10px 0 5px 0; font-size: 16px;">${biblioteca[id].titulo}</h3>
-                    <p style="margin: 0; color: #666; font-size: 14px;">${biblioteca[id].autor}</p>
-                    <p style="margin: 5px 0; color: #000;"><b>Q${biblioteca[id].precio}</b></p>
-                </a>
-            </div>
-        `).join('');
+contenedor.innerHTML = encontrados.map(id => `
+    <div class="tarjeta-libro">
+        <a href="detalle.html?id=${id}" style="text-decoration:none; color:inherit;">
+            <img src="${biblioteca[id].imagen}" alt="${biblioteca[id].titulo}" 
+                 style="width: 180px; height: 250px; object-fit: contain; border-radius: 8px;">
+            <h3 style="margin: 10px 0 5px 0; font-size: 16px;">${biblioteca[id].titulo}</h3>
+            <p style="margin: 0; color: #666; font-size: 14px;">${biblioteca[id].autor}</p>
+            <p style="margin: 5px 0; color: #000;"><b>Q${biblioteca[id].precio}</b></p>
+        </a>
+    </div>
+`).join('');
     };
 </script>
 </body>
