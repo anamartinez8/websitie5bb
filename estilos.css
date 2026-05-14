@@ -5,8 +5,10 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #ffffff;
+    line-height: 1.6;
+    color: #333;
 }
 
 .header-logo {
@@ -21,347 +23,20 @@ body {
     width: auto;
 }
 
-.nav-negra {
-    background-color: #000;
-}
-
-.nav-negra ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-negra ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.nav-negra ul li a:hover {
-    background-color: #333;
-}
-
-.seccion-promo {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.banner-verde {
-    background-color: #a4c3b2;
-    width: 100%;
-    max-width: 1100px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-}
-
-/* Navegación */
-.navbar {
-    background-color: black;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-}
-
-.navbar ul li {
-    margin-left: 20px;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Contenedor */
-.container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Cuadrícula de Libros */
-.book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.book-card {
-    background: white;
-    padding: 15px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.book-cover {
-    background: #ddd;
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    border-radius: 4px;
-}
-
-.price {
-    display: block;
-    color: #e67e22;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-.header-logo {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.logo-img {
-    height: 100px;
-    width: auto;
-}
-
-.nav-negra {
-    background-color: #000;
-}
-
-.nav-negra ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-negra ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 25px;
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.nav-negra ul li a:hover {
-    background-color: #333;
-}
-
-.contenedor-banner {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.banner-img {
-    width: 90%; 
-    max-width: 1200px;
-    height: auto; 
-    display: block;
-    border-radius: 4px; 
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-}
-
-/* LOGO */
-.header-logo {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.logo-img {
-    height: 100px;
-    width: auto;
-}
-
-/* NAVEGACIÓN NEGRA */
-.nav-negra {
+.nav-negra, .navbar {
     background-color: #000;
     position: relative;
-    z-index: 100;
+    z-index: 1000;
 }
 
-.nav-negra ul {
+.nav-negra ul, .navbar ul {
     list-style: none;
     display: flex;
     justify-content: center;
-}
-
-.nav-negra ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.nav-negra ul li a:hover {
-    background-color: #333;
-}
-
-/* DROPDOWN (MENÚ BLANCO) */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    min-width: 280px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-    padding: 10px 0;
-}
-
-.dropdown-content li {
-    display: block;
-    width: 100%;
-}
-
-.dropdown-content li a {
-    color: #333 !important;
-    text-transform: none !important;
-    font-weight: normal !important;
-    text-align: left;
-    padding: 10px 20px !important;
-    border-bottom: 1px solid #f1f1f1;
-}
-
-.dropdown-content li a:hover {
-    background-color: #f9f9f9;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* GRID DE LIBROS */
-.contenedor-libros {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.grid-libros {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.tarjeta-libro {
-    text-align: center;
-}
-
-.portada-placeholder {
-    background-color: #eee;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #888;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-}
-
-.tarjeta-libro h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.tarjeta-libro p {
-    color: #666;
-    font-size: 14px;
-}
-
-.precio {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-* {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: sans-serif;
-}
-
-.header-logo {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.logo-img {
-    height: 100px;
-    width: auto;
-}
-
-.nav-negra {
-    background-color: #000;
-}
-
-.nav-negra ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-negra ul li a {
+.nav-negra ul li a, .navbar ul li a {
     color: #fff;
     text-decoration: none;
     padding: 15px 20px;
@@ -369,6 +44,10 @@ body {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.nav-negra ul li a:hover, .navbar ul li a:hover {
+    background-color: #333;
 }
 
 .dropdown {
@@ -383,87 +62,178 @@ body {
     background-color: #fff;
     min-width: 250px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1000;
-    /* Asegura que los hijos no se alineen en fila */
-    flex-direction: column; 
+    padding: 10px 0;
 }
 
 .dropdown-content.show {
-    display: flex; /* Cambiado a flex para controlar la dirección */
+    display: block !important;
 }
 
 .dropdown-content li {
-    width: 100%; /* Ocupa todo el ancho del cuadro blanco */
     display: block;
+    width: 100%;
 }
 
 .dropdown-content li a {
     color: #333 !important;
     text-transform: none !important;
     font-weight: normal !important;
+    text-align: left;
     padding: 12px 20px !important;
     border-bottom: 1px solid #eee;
-    width: 100%;
-    text-align: left;
 }
 
 .dropdown-content li a:hover {
     background-color: #f5f5f5;
 }
 
-.contenedor-libros {
+.contenedor-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.banner-img {
+    width: 90%; 
+    max-width: 1200px;
+    height: auto; 
+    border-radius: 4px; 
+    display: block;
+}
+
+.contenedor-principal {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-.grid-libros {
+.seccion-libros-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 30px;
+    margin-top: 30px;
 }
 
-.portada-placeholder {
-    background-color: #eee;
-    height: 300px;
-    margin-bottom: 15px;
+.tarjeta-libro {
+    text-align: center;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
 }
 
-/* Contenedor de la imagen */
-.portada-contenedor {
-    width: 100%;
-    height: 350px; /* Puedes subirlo a 400px si los libros son altos */
-    background-color: #f9f9f9; /* Fondo gris muy suave por si el libro es angosto */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin-bottom: 15px;
+.tarjeta-libro:hover {
+    transform: translateY(-5px);
 }
 
-/* Estilo para que la imagen NO se corte */
 .img-portada {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* CLAVE: Esto hace que la imagen se vea completa sin cortarse */
-    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
 }
 
-/* Ajuste de los textos */
 .tarjeta-libro h3 {
     font-size: 16px;
-    font-weight: bold;
-    margin-top: 10px;
+    margin: 10px 0 5px;
+    height: 40px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .tarjeta-libro p {
     font-size: 14px;
     color: #666;
+    margin-bottom: 10px;
 }
 
 .tarjeta-libro span {
     font-weight: bold;
+    font-size: 17px;
+    color: #000;
+}
+
+.contenedor-detalle {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.detalle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+}
+
+.detalle-imagen img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.autor-texto {
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.precio-detalle {
+    font-size: 24px;
+    color: #b12704;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.btn-agregar {
+    background-color: #000;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 16px;
-    display: block;
-    margin-top: 5px;
+    width: 100%;
+}
+
+.contenedor-busqueda-avanzada {
+    background-color: #f4f4f4;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 850px;
+    border-radius: 10px;
+}
+
+.grid-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.campo input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#btn-buscar {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

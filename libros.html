@@ -26,57 +26,13 @@
                     <li><a href="novela.html">Novela</a></li>
                     <li><a href="poesia.html">Poesía</a></li>
                     <li><a href="cuentos.html">Cuentos</a></li>
-                </ul>
-            </li>
-            <li><a href="ediciones.html">Ediciones especiales</a></li>
-            <li><a href="promociones.html">Promociones</a></li>
+                </ul>            </li>
+            <li><a href="promocion.html">Promociones</a></li>
             <li><a href="busqueda.html">Búsqueda avanzada</a></li>
         </ul>
     </nav>
-
-    <main class="contenedor-libros">
-        <div class="grid-libros">
-            <div class="tarjeta-libro">
-                <div class="portada-placeholder"></div>
-                <h3></h3>
-                <p></p>
-                <span></span>
-            </div>
-            <div class="tarjeta-libro">
-                <div class="portada-placeholder"></div>
-                <h3></h3>
-                <p></p>
-                <span></span>
-            </div>
-            <div class="tarjeta-libro">
-                <div class="portada-placeholder"></div>
-                <h3></h3>
-                <p></p>
-                <span></span>
-            </div>
-            <div class="tarjeta-libro">
-                <div class="portada-placeholder"></div>
-                <h3></h3>
-                <p></p>
-                <span></span>
-            </div>
-        </div>
-    </main>
-
-    <script>
-        const btn = document.getElementById('btn-libros');
-        const menu = document.getElementById('menu-libros');
-
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            menu.classList.toggle('show');
-        });
-
-        document.addEventListener('click', () => {
-            menu.classList.remove('show');
-        });
-    </script>
-
+    <section class="contenedor-banner">
+    <img src="IMG/promolibros.png" alt="Promoción Especial" class="banner-img">
+    
 </body>
 </html>

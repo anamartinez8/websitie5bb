@@ -1,30 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Libros</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
-<body bgcolor="#EDECE1">
-    <section class="seccion-especial">
-  <h2 class="titulo-seccion">Ediciones especiales</h2>
-  
-  <div class="grid-productos">
-    <a href="detalle-libro.html" class="tarjeta-libro">
-      <div class="contenedor-imagen">
-        <span class="etiqueta-descuento">-10%</span>
-        <img src="IMG/Flores del mal-147001.jpg" alt="Flores del mal" width="200px" height="150px">
-        <div class="capa-interactiva">
-          <span class="btn-ver-mas">Ver detalles</span>
-          <span class="estado-disponible">Disponible</span>
+<body>
+
+    <header class="header-logo">
+        <a href="index.html">
+            <img src="IMG/logo.png" alt="Logo" class="logo-img">
+        </a>
+    </header>
+
+    <nav class="nav-negra">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="libros.html">Libros ▾</a>
+            <li><a href="promocion.html">Promociones</a></li>
+            <li><a href="busqueda.html">Búsqueda avanzada</a></li>
+        </ul>
+    </nav>
+    <main class="contenedor-principal">
+        <h1>Libros en promoción</h1>
+        
+        <div class="seccion-libros-grid">
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/promocion1.jpg" alt="La Llama Inmortal de Stephen Crane" class="img-portada">
+                    </div>
+                <h3>La Llama Inmortal de Stephen Crane</h3>
+                <p>Auster, Paul</p>
+                <span>Q183s.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/promocion2.jpg" alt="Ceniza Roja" class="img-portada">
+                    </div>
+                <h3>Ceniza Roja</h3>
+                <p>Venegas, Socorro</p>
+                <span>Q95.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/promocion3.jpg" alt="Sabemos Cómo Vamos a Morir" class="img-portada">
+                    </div>
+                <h3>Sabemos Cómo Vamos a Morir</h3>
+                <p>Taibo Ii, Paco Ignacio</p>
+                <span>Q105.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/promocion4.jpg" alt="La vida en las ventanas" class="img-portada">
+                    </div>
+                <h3>La vida en las ventanas</h3>
+                <p>Neuman, Andrés</p>
+                <span>Q55.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/promocion5.jpg" alt="Niños" class="img-portada">
+                    </div>
+                <h3>Niños</h3>
+                <p>David Roas / David, Roas</p>
+                <span>Q85.00</span>
+            </div>
+            
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/promocion6.jpg" alt="Cuentos Anglosajones" class="img-portada">
+                    </div>
+                <h3>Cuentos Anglosajoness</h3>
+                <p>Varios autores</p>
+                <span>Q75.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/promocion7.jpg" alt="Una Familia Normal" class="img-portada">
+                    </div>
+                <h3>Una Familia Normal</h3>
+                <p>Mattias Edvardsson / Edvardsson, Mattias</p>
+                <span>Q115.00</span>
+            </div>
+
+            <div class="tarjeta-libro">
+                <div class="portada-placeholder">
+                <img src="IMG/promocion8.jpg" alt="Tras Tus Pasos" class="img-portada">
+                    </div>
+                <h3>Tras Tus Pasos</h3>
+                <p>Begoña Aranguren</p>
+                <span>Q120.00</span>
+
         </div>
-      </div>
-      <div class="info-libro">
-        <h3>Flores del mal</h3>
-        <p class="autor-libro">Charles Baudelaire</p>
-      </div>
-    </a>
-  </div>
-</section>
+    </main>
+
 </body>
 </html>
